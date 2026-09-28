@@ -3,20 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EDB48DD22E0CD64500DDA70E /* LumacamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DD12E0CD64500DDA70E /* LumacamApp.swift */; };
-		EDB48DD42E0CD64500DDA70E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DD32E0CD64500DDA70E /* ContentView.swift */; };
-		EDB48DD62E0CD64800DDA70E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB48DD52E0CD64800DDA70E /* Assets.xcassets */; };
-		EDB48DD92E0CD64800DDA70E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB48DD82E0CD64800DDA70E /* Preview Assets.xcassets */; };
 		EDB48DE32E0CD64800DDA70E /* LumacamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DE22E0CD64800DDA70E /* LumacamTests.swift */; };
 		EDB48DED2E0CD64800DDA70E /* LumacamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DEC2E0CD64800DDA70E /* LumacamUITests.swift */; };
 		EDB48DEF2E0CD64800DDA70E /* LumacamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DEE2E0CD64800DDA70E /* LumacamUITestsLaunchTests.swift */; };
-		EDB48E012E0E5F3800DDA70E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48E002E0E5F3800DDA70E /* CameraView.swift */; };
-		EDB48E052E0E65EF00DDA70E /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48E042E0E65EF00DDA70E /* CameraPreview.swift */; };
-		EDB48E072E0E66BA00DDA70E /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48E062E0E66BA00DDA70E /* CameraManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,20 +31,33 @@
 
 /* Begin PBXFileReference section */
 		EDB48DCE2E0CD64500DDA70E /* Lumacam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumacam.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDB48DD12E0CD64500DDA70E /* LumacamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumacamApp.swift; sourceTree = "<group>"; };
-		EDB48DD32E0CD64500DDA70E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EDB48DD52E0CD64800DDA70E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EDB48DD82E0CD64800DDA70E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDB48DDE2E0CD64800DDA70E /* LumacamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LumacamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB48DE22E0CD64800DDA70E /* LumacamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumacamTests.swift; sourceTree = "<group>"; };
 		EDB48DE82E0CD64800DDA70E /* LumacamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LumacamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB48DEC2E0CD64800DDA70E /* LumacamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumacamUITests.swift; sourceTree = "<group>"; };
 		EDB48DEE2E0CD64800DDA70E /* LumacamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumacamUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EDB48DFD2E0CDFC200DDA70E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		EDB48E002E0E5F3800DDA70E /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		EDB48E042E0E65EF00DDA70E /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
-		EDB48E062E0E66BA00DDA70E /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EDB48F012E0E700000DDA70E /* Exceptions for "Lumacam" folder in "Lumacam" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EDB48DCD2E0CD64500DDA70E /* Lumacam */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EDB48DD02E0CD64500DDA70E /* Lumacam */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EDB48F012E0E700000DDA70E /* Exceptions for "Lumacam" folder in "Lumacam" target */,
+			);
+			path = Lumacam;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EDB48DCB2E0CD64500DDA70E /* Frameworks */ = {
@@ -98,29 +104,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EDB48DD02E0CD64500DDA70E /* Lumacam */ = {
-			isa = PBXGroup;
-			children = (
-				EDB48DFD2E0CDFC200DDA70E /* Info.plist */,
-				EDB48DD12E0CD64500DDA70E /* LumacamApp.swift */,
-				EDB48DD32E0CD64500DDA70E /* ContentView.swift */,
-				EDB48E002E0E5F3800DDA70E /* CameraView.swift */,
-				EDB48E062E0E66BA00DDA70E /* CameraManager.swift */,
-				EDB48E042E0E65EF00DDA70E /* CameraPreview.swift */,
-				EDB48DD52E0CD64800DDA70E /* Assets.xcassets */,
-				EDB48DD72E0CD64800DDA70E /* Preview Content */,
-			);
-			path = Lumacam;
-			sourceTree = "<group>";
-		};
-		EDB48DD72E0CD64800DDA70E /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				EDB48DD82E0CD64800DDA70E /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		EDB48DE12E0CD64800DDA70E /* LumacamTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +135,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EDB48DD02E0CD64500DDA70E /* Lumacam */,
 			);
 			name = Lumacam;
 			productName = Lumacam;
@@ -242,8 +228,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB48DD92E0CD64800DDA70E /* Preview Assets.xcassets in Resources */,
-				EDB48DD62E0CD64800DDA70E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,11 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB48E052E0E65EF00DDA70E /* CameraPreview.swift in Sources */,
-				EDB48DD42E0CD64500DDA70E /* ContentView.swift in Sources */,
-				EDB48DD22E0CD64500DDA70E /* LumacamApp.swift in Sources */,
-				EDB48E072E0E66BA00DDA70E /* CameraManager.swift in Sources */,
-				EDB48E012E0E5F3800DDA70E /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +427,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,7 +457,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,29 +8,74 @@
 import XCTest
 @testable import Lumacam
 
-final class LumacamTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+final class LensPresetTests: XCTestCase {
+    func testTripleCameraWithThreeTimesTelephoto() {
+        let lenses = CameraCapabilities.lensPresets(minZoom: 0.5, maxZoom: 15, telephoto: 3)
+        XCTAssertEqual(lenses, [0.5, 1, 2, 3])
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testTripleCameraWithFiveTimesTelephoto() {
+        let lenses = CameraCapabilities.lensPresets(minZoom: 0.5, maxZoom: 25, telephoto: 5)
+        XCTAssertEqual(lenses, [0.5, 1, 2, 5])
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testDualWideCameraGetsDigitalTwoTimes() {
+        let lenses = CameraCapabilities.lensPresets(minZoom: 0.5, maxZoom: 10, telephoto: nil)
+        XCTAssertEqual(lenses, [0.5, 1, 2])
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testTwoTimesTelephotoIsNotDuplicated() {
+        let lenses = CameraCapabilities.lensPresets(minZoom: 1, maxZoom: 10, telephoto: 2)
+        XCTAssertEqual(lenses, [1, 2])
     }
 
+    func testSingleWideCamera() {
+        let lenses = CameraCapabilities.lensPresets(minZoom: 1, maxZoom: 10, telephoto: nil)
+        XCTAssertEqual(lenses, [1, 2])
+    }
+}
+
+final class LensLabelTests: XCTestCase {
+    func testLabels() {
+        XCTAssertEqual(LensSelector.label(for: 0.5), ".5")
+        XCTAssertEqual(LensSelector.label(for: 1), "1")
+        XCTAssertEqual(LensSelector.label(for: 1.26), "1.3")
+        XCTAssertEqual(LensSelector.label(for: 3), "3")
+    }
+}
+
+final class LevelReadingTests: XCTestCase {
+    private let accuracy = 0.0001
+
+    func testUprightPortraitIsLevel() {
+        let reading = LevelMonitor.reading(x: 0, y: -1, z: 0)
+        XCTAssertEqual(reading.roll, 0, accuracy: accuracy)
+        XCTAssertEqual(reading.deviation, 0, accuracy: accuracy)
+        XCTAssertTrue(reading.isUpright)
+    }
+
+    func testSlightClockwiseTilt() {
+        let angle = 5.0 * .pi / 180
+        let reading = LevelMonitor.reading(x: sin(angle), y: -cos(angle), z: 0)
+        XCTAssertEqual(reading.deviation, angle, accuracy: accuracy)
+    }
+
+    func testLandscapeMeasuresFromNearestQuarterTurn() {
+        let angle = 90.0 * .pi / 180 - 3.0 * .pi / 180
+        let reading = LevelMonitor.reading(x: sin(angle), y: -cos(angle), z: 0)
+        XCTAssertEqual(reading.deviation, -3.0 * .pi / 180, accuracy: accuracy)
+    }
+
+    func testFlatPhoneIsNotUpright() {
+        XCTAssertFalse(LevelMonitor.reading(x: 0, y: 0, z: -1).isUpright)
+    }
+}
+
+final class SelfTimerTests: XCTestCase {
+    @MainActor
+    func testCyclesThroughOptions() {
+        XCTAssertEqual(CameraViewModel.SelfTimer.off.next, .three)
+        XCTAssertEqual(CameraViewModel.SelfTimer.three.next, .ten)
+        XCTAssertEqual(CameraViewModel.SelfTimer.ten.next, .off)
+    }
 }

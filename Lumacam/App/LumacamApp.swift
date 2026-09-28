@@ -11,7 +11,7 @@ import SwiftUI
 struct LumacamApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CameraScreen()
         }
     }
 }
