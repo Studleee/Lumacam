@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -39,7 +39,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		EDB48F012E0E700000DDA70E /* Exceptions for "Lumacam" folder in "Lumacam" target */ = {
+		EDB48F012E0E700000DDA70E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -49,14 +49,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		EDB48DD02E0CD64500DDA70E /* Lumacam */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				EDB48F012E0E700000DDA70E /* Exceptions for "Lumacam" folder in "Lumacam" target */,
-			);
-			path = Lumacam;
-			sourceTree = "<group>";
-		};
+		EDB48DD02E0CD64500DDA70E /* Lumacam */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (EDB48F012E0E700000DDA70E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Lumacam; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */

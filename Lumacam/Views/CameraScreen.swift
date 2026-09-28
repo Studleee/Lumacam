@@ -86,12 +86,13 @@ struct CameraScreen: View {
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
 
-            if model.capabilities.lenses.count > 1 {
-                LensSelector(
-                    lenses: model.capabilities.lenses,
+            let zoomRange = model.capabilities.zoomRange
+            if zoomRange.upperBound > zoomRange.lowerBound {
+                ZoomDial(
                     zoom: model.zoom,
-                    activeLens: model.activeLens,
-                    onSelect: model.selectLens
+                    range: zoomRange,
+                    lenses: model.capabilities.lenses,
+                    onChange: { value, animated in model.setZoom(value, animated: animated) }
                 )
             }
 

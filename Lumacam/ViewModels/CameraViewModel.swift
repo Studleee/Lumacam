@@ -43,10 +43,6 @@ final class CameraViewModel {
     /// Controls that would disrupt a capture in progress are locked while this is true.
     var isBusy: Bool { isRecording || countdown != nil }
 
-    var activeLens: CGFloat {
-        capabilities.lenses.last { zoom >= $0 - 0.01 } ?? capabilities.lenses.first ?? 1
-    }
-
     // MARK: - Lifecycle
 
     func start() async {
@@ -104,10 +100,6 @@ final class CameraViewModel {
         let range = capabilities.zoomRange
         zoom = min(max(value, range.lowerBound), range.upperBound)
         service.setZoom(zoom, animated: animated)
-    }
-
-    func selectLens(_ lens: CGFloat) {
-        setZoom(lens, animated: true)
     }
 
     func beginPinch() {

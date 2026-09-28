@@ -37,10 +37,10 @@ final class LensPresetTests: XCTestCase {
 
 final class LensLabelTests: XCTestCase {
     func testLabels() {
-        XCTAssertEqual(LensSelector.label(for: 0.5), ".5")
-        XCTAssertEqual(LensSelector.label(for: 1), "1")
-        XCTAssertEqual(LensSelector.label(for: 1.26), "1.3")
-        XCTAssertEqual(LensSelector.label(for: 3), "3")
+        XCTAssertEqual(ZoomDial.label(for: 0.5), ".5")
+        XCTAssertEqual(ZoomDial.label(for: 1), "1")
+        XCTAssertEqual(ZoomDial.label(for: 1.26), "1.3")
+        XCTAssertEqual(ZoomDial.label(for: 3), "3")
     }
 }
 

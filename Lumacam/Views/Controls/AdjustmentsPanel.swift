@@ -46,7 +46,7 @@ struct AdjustmentsPanel: View {
                         set: { model.setZoom(CGFloat($0)) }
                     ),
                     range: Double(zoom.lowerBound)...Double(zoom.upperBound),
-                    displayValue: LensSelector.label(for: model.zoom) + "×"
+                    displayValue: ZoomDial.label(for: model.zoom) + "×"
                 )
             }
         }
