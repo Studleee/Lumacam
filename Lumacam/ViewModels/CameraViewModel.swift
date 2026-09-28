@@ -29,6 +29,11 @@ final class CameraViewModel {
     private(set) var focusTapCount = 0
     private(set) var isShutterFlashing = false
     var selfTimer: SelfTimer = .off
+    private(set) var photoAspect: PhotoAspect = PhotoAspect(
+        rawValue: UserDefaults.standard.string(forKey: "photoAspect") ?? ""
+    ) ?? .sixteenNine {
+        didSet { UserDefaults.standard.set(photoAspect.rawValue, forKey: "photoAspect") }
+    }
     var showsGrid = false
     var showsAdjustments = false
     var errorMessage: String?
@@ -39,9 +44,19 @@ final class CameraViewModel {
 
     @ObservationIgnored private var countdownTask: Task<Void, Never>?
     @ObservationIgnored private var pinchStartZoom: CGFloat = 1
+    /// Aspect ratio chosen at the moment each in-flight photo was taken, oldest first.
+    @ObservationIgnored private var pendingPhotoAspects: [PhotoAspect] = []
 
     /// Controls that would disrupt a capture in progress are locked while this is true.
     var isBusy: Bool { isRecording || countdown != nil }
+
+    /// Width over height of the preview frame, which matches what gets saved.
+    var previewAspectRatio: CGFloat {
+        switch mode {
+        case .photo: 1 / photoAspect.longToShortRatio
+        case .video: 9.0 / 16.0
+        }
+    }
 
     // MARK: - Lifecycle
 
@@ -126,6 +141,12 @@ final class CameraViewModel {
         showsGrid ? level.start() : level.stop()
     }
 
+    func cyclePhotoAspect() {
+        guard !isBusy else { return }
+        focusPoint = nil
+        photoAspect = photoAspect.next
+    }
+
     func cycleSelfTimer() {
         selfTimer = selfTimer.next
     }
@@ -146,7 +167,9 @@ final class CameraViewModel {
 
     private func capture() {
         switch mode {
-        case .photo: service.capturePhoto()
+        case .photo:
+            pendingPhotoAspects.append(photoAspect)
+            service.capturePhoto()
         case .video: service.toggleRecording()
         }
     }
@@ -180,7 +203,13 @@ final class CameraViewModel {
         case .willCapturePhoto:
             flashShutter()
         case .photoCaptured(let data):
-            Task { await save { try await self.gallery.savePhoto(data) } }
+            let aspect = pendingPhotoAspects.isEmpty ? photoAspect : pendingPhotoAspects.removeFirst()
+            Task {
+                let cropped = await Task.detached(priority: .userInitiated) {
+                    PhotoCropper.crop(data, to: aspect)
+                }.value
+                await save { try await self.gallery.savePhoto(cropped ?? data) }
+            }
         case .recordingStarted:
             isRecording = true
             recordingStartedAt = .now

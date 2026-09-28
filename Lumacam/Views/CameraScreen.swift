@@ -55,7 +55,7 @@ struct CameraScreen: View {
             onPinchBegan: { model.beginPinch() },
             onPinchChanged: { scale in model.pinch(scale: scale) }
         )
-        .aspectRatio(model.mode == .photo ? 3.0 / 4.0 : 9.0 / 16.0, contentMode: .fit)
+        .aspectRatio(model.previewAspectRatio, contentMode: .fit)
         .overlay {
             ZStack {
                 if model.showsGrid {
@@ -76,7 +76,7 @@ struct CameraScreen: View {
         }
         .clipped()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .animation(.easeInOut(duration: 0.25), value: model.mode)
+        .animation(.easeInOut(duration: 0.25), value: model.previewAspectRatio)
     }
 
     private var bottomControls: some View {

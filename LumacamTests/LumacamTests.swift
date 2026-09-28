@@ -79,3 +79,38 @@ final class SelfTimerTests: XCTestCase {
         XCTAssertEqual(CameraViewModel.SelfTimer.ten.next, .off)
     }
 }
+
+final class PhotoCropperTests: XCTestCase {
+    func testLandscapeFourThreeToSixteenNine() {
+        let rect = PhotoCropper.cropRect(width: 4032, height: 3024, ratio: PhotoAspect.sixteenNine.longToShortRatio)
+        XCTAssertEqual(rect, CGRect(x: 0, y: 378, width: 4032, height: 2268))
+    }
+
+    func testPortraitFourThreeToSixteenNine() {
+        let rect = PhotoCropper.cropRect(width: 3024, height: 4032, ratio: PhotoAspect.sixteenNine.longToShortRatio)
+        XCTAssertEqual(rect, CGRect(x: 378, y: 0, width: 2268, height: 4032))
+    }
+
+    func testSquare() {
+        let rect = PhotoCropper.cropRect(width: 4032, height: 3024, ratio: PhotoAspect.square.longToShortRatio)
+        XCTAssertEqual(rect, CGRect(x: 504, y: 0, width: 3024, height: 3024))
+    }
+
+    func testMatchingRatioIsLeftAlone() {
+        XCTAssertNil(PhotoCropper.cropRect(width: 4032, height: 3024, ratio: PhotoAspect.fourThree.longToShortRatio))
+    }
+
+    func testCropsEncodedImage() throws {
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1
+        let image = UIGraphicsImageRenderer(size: CGSize(width: 400, height: 300), format: format).image { context in
+            UIColor.red.setFill()
+            context.fill(CGRect(x: 0, y: 0, width: 400, height: 300))
+        }
+        let data = try XCTUnwrap(image.jpegData(compressionQuality: 0.9))
+        let cropped = try XCTUnwrap(PhotoCropper.crop(data, to: .sixteenNine))
+        let result = try XCTUnwrap(UIImage(data: cropped))
+        XCTAssertEqual(result.size.width * result.scale, 400)
+        XCTAssertEqual(result.size.height * result.scale, 225)
+    }
+}

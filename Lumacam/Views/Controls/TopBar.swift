@@ -25,6 +25,20 @@ struct TopBar: View {
 
             if let start = model.recordingStartedAt {
                 RecordingBadge(start: start)
+            } else if model.mode == .photo {
+                Button(action: model.cyclePhotoAspect) {
+                    Text(model.photoAspect.title)
+                        .font(.system(size: 13, weight: .bold, design: .rounded))
+                        .monospacedDigit()
+                        .foregroundStyle(Color.white)
+                        .frame(minWidth: 52)
+                        .padding(.vertical, 7)
+                        .background(Capsule().strokeBorder(Color.white.opacity(0.6), lineWidth: 1.5))
+                        .contentShape(Capsule())
+                }
+                .buttonStyle(.plain)
+                .disabled(model.isBusy)
+                .accessibilityLabel("Aspect ratio \(model.photoAspect.title)")
             }
 
             Spacer()
