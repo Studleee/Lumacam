@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDB48DD22E0CD64500DDA70E /* LumacamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DD12E0CD64500DDA70E /* LumacamApp.swift */; };
+		EDB48DD42E0CD64500DDA70E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DD32E0CD64500DDA70E /* ContentView.swift */; };
+		EDB48DD62E0CD64800DDA70E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB48DD52E0CD64800DDA70E /* Assets.xcassets */; };
+		EDB48DD92E0CD64800DDA70E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB48DD82E0CD64800DDA70E /* Preview Assets.xcassets */; };
+		EDB48DE32E0CD64800DDA70E /* LumacamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DE22E0CD64800DDA70E /* LumacamTests.swift */; };
+		EDB48DED2E0CD64800DDA70E /* LumacamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DEC2E0CD64800DDA70E /* LumacamUITests.swift */; };
+		EDB48DEF2E0CD64800DDA70E /* LumacamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DEE2E0CD64800DDA70E /* LumacamUITestsLaunchTests.swift */; };
+		EDB48E012E0E5F3800DDA70E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48E002E0E5F3800DDA70E /* CameraView.swift */; };
+		EDB48E052E0E65EF00DDA70E /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48E042E0E65EF00DDA70E /* CameraPreview.swift */; };
+		EDB48E072E0E66BA00DDA70E /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48E062E0E66BA00DDA70E /* CameraManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDB48DDF2E0CD64800DDA70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDB48DC62E0CD64500DDA70E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDB48DCD2E0CD64500DDA70E;
+			remoteInfo = Lumacam;
+		};
+		EDB48DE92E0CD64800DDA70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDB48DC62E0CD64500DDA70E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDB48DCD2E0CD64500DDA70E;
+			remoteInfo = Lumacam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EDB48DCE2E0CD64500DDA70E /* Lumacam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumacam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB48DD12E0CD64500DDA70E /* LumacamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumacamApp.swift; sourceTree = "<group>"; };
+		EDB48DD32E0CD64500DDA70E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDB48DD52E0CD64800DDA70E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDB48DD82E0CD64800DDA70E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDB48DDE2E0CD64800DDA70E /* LumacamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LumacamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB48DE22E0CD64800DDA70E /* LumacamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumacamTests.swift; sourceTree = "<group>"; };
+		EDB48DE82E0CD64800DDA70E /* LumacamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LumacamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB48DEC2E0CD64800DDA70E /* LumacamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumacamUITests.swift; sourceTree = "<group>"; };
+		EDB48DEE2E0CD64800DDA70E /* LumacamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumacamUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EDB48DFD2E0CDFC200DDA70E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EDB48E002E0E5F3800DDA70E /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		EDB48E042E0E65EF00DDA70E /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		EDB48E062E0E66BA00DDA70E /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDB48DCB2E0CD64500DDA70E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB48DDB2E0CD64800DDA70E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB48DE52E0CD64800DDA70E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDB48DC52E0CD64500DDA70E = {
+			isa = PBXGroup;
+			children = (
+				EDB48DD02E0CD64500DDA70E /* Lumacam */,
+				EDB48DE12E0CD64800DDA70E /* LumacamTests */,
+				EDB48DEB2E0CD64800DDA70E /* LumacamUITests */,
+				EDB48DCF2E0CD64500DDA70E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDB48DCF2E0CD64500DDA70E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDB48DCE2E0CD64500DDA70E /* Lumacam.app */,
+				EDB48DDE2E0CD64800DDA70E /* LumacamTests.xctest */,
+				EDB48DE82E0CD64800DDA70E /* LumacamUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDB48DD02E0CD64500DDA70E /* Lumacam */ = {
+			isa = PBXGroup;
+			children = (
+				EDB48DFD2E0CDFC200DDA70E /* Info.plist */,
+				EDB48DD12E0CD64500DDA70E /* LumacamApp.swift */,
+				EDB48DD32E0CD64500DDA70E /* ContentView.swift */,
+				EDB48E002E0E5F3800DDA70E /* CameraView.swift */,
+				EDB48E062E0E66BA00DDA70E /* CameraManager.swift */,
+				EDB48E042E0E65EF00DDA70E /* CameraPreview.swift */,
+				EDB48DD52E0CD64800DDA70E /* Assets.xcassets */,
+				EDB48DD72E0CD64800DDA70E /* Preview Content */,
+			);
+			path = Lumacam;
+			sourceTree = "<group>";
+		};
+		EDB48DD72E0CD64800DDA70E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EDB48DD82E0CD64800DDA70E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDB48DE12E0CD64800DDA70E /* LumacamTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDB48DE22E0CD64800DDA70E /* LumacamTests.swift */,
+			);
+			path = LumacamTests;
+			sourceTree = "<group>";
+		};
+		EDB48DEB2E0CD64800DDA70E /* LumacamUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDB48DEC2E0CD64800DDA70E /* LumacamUITests.swift */,
+				EDB48DEE2E0CD64800DDA70E /* LumacamUITestsLaunchTests.swift */,
+			);
+			path = LumacamUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDB48DCD2E0CD64500DDA70E /* Lumacam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB48DF22E0CD64800DDA70E /* Build configuration list for PBXNativeTarget "Lumacam" */;
+			buildPhases = (
+				EDB48DCA2E0CD64500DDA70E /* Sources */,
+				EDB48DCB2E0CD64500DDA70E /* Frameworks */,
+				EDB48DCC2E0CD64500DDA70E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lumacam;
+			productName = Lumacam;
+			productReference = EDB48DCE2E0CD64500DDA70E /* Lumacam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDB48DDD2E0CD64800DDA70E /* LumacamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB48DF52E0CD64800DDA70E /* Build configuration list for PBXNativeTarget "LumacamTests" */;
+			buildPhases = (
+				EDB48DDA2E0CD64800DDA70E /* Sources */,
+				EDB48DDB2E0CD64800DDA70E /* Frameworks */,
+				EDB48DDC2E0CD64800DDA70E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDB48DE02E0CD64800DDA70E /* PBXTargetDependency */,
+			);
+			name = LumacamTests;
+			productName = LumacamTests;
+			productReference = EDB48DDE2E0CD64800DDA70E /* LumacamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDB48DE72E0CD64800DDA70E /* LumacamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB48DF82E0CD64800DDA70E /* Build configuration list for PBXNativeTarget "LumacamUITests" */;
+			buildPhases = (
+				EDB48DE42E0CD64800DDA70E /* Sources */,
+				EDB48DE52E0CD64800DDA70E /* Frameworks */,
+				EDB48DE62E0CD64800DDA70E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDB48DEA2E0CD64800DDA70E /* PBXTargetDependency */,
+			);
+			name = LumacamUITests;
+			productName = LumacamUITests;
+			productReference = EDB48DE82E0CD64800DDA70E /* LumacamUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDB48DC62E0CD64500DDA70E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					EDB48DCD2E0CD64500DDA70E = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					EDB48DDD2E0CD64800DDA70E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = EDB48DCD2E0CD64500DDA70E;
+					};
+					EDB48DE72E0CD64800DDA70E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = EDB48DCD2E0CD64500DDA70E;
+					};
+				};
+			};
+			buildConfigurationList = EDB48DC92E0CD64500DDA70E /* Build configuration list for PBXProject "Lumacam" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDB48DC52E0CD64500DDA70E;
+			productRefGroup = EDB48DCF2E0CD64500DDA70E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDB48DCD2E0CD64500DDA70E /* Lumacam */,
+				EDB48DDD2E0CD64800DDA70E /* LumacamTests */,
+				EDB48DE72E0CD64800DDA70E /* LumacamUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDB48DCC2E0CD64500DDA70E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB48DD92E0CD64800DDA70E /* Preview Assets.xcassets in Resources */,
+				EDB48DD62E0CD64800DDA70E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB48DDC2E0CD64800DDA70E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB48DE62E0CD64800DDA70E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDB48DCA2E0CD64500DDA70E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB48E052E0E65EF00DDA70E /* CameraPreview.swift in Sources */,
+				EDB48DD42E0CD64500DDA70E /* ContentView.swift in Sources */,
+				EDB48DD22E0CD64500DDA70E /* LumacamApp.swift in Sources */,
+				EDB48E072E0E66BA00DDA70E /* CameraManager.swift in Sources */,
+				EDB48E012E0E5F3800DDA70E /* CameraView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB48DDA2E0CD64800DDA70E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB48DE32E0CD64800DDA70E /* LumacamTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB48DE42E0CD64800DDA70E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB48DED2E0CD64800DDA70E /* LumacamUITests.swift in Sources */,
+				EDB48DEF2E0CD64800DDA70E /* LumacamUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDB48DE02E0CD64800DDA70E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDB48DCD2E0CD64500DDA70E /* Lumacam */;
+			targetProxy = EDB48DDF2E0CD64800DDA70E /* PBXContainerItemProxy */;
+		};
+		EDB48DEA2E0CD64800DDA70E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDB48DCD2E0CD64500DDA70E /* Lumacam */;
+			targetProxy = EDB48DE92E0CD64800DDA70E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EDB48DF02E0CD64800DDA70E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDB48DF12E0CD64800DDA70E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDB48DF32E0CD64800DDA70E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lumacam/Preview Content\"";
+				DEVELOPMENT_TEAM = BF6F4ML34J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lumacam/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = goodman.Lumacam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDB48DF42E0CD64800DDA70E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lumacam/Preview Content\"";
+				DEVELOPMENT_TEAM = BF6F4ML34J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lumacam/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = goodman.Lumacam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EDB48DF62E0CD64800DDA70E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = goodman.LumacamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lumacam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Lumacam";
+			};
+			name = Debug;
+		};
+		EDB48DF72E0CD64800DDA70E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = goodman.LumacamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lumacam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Lumacam";
+			};
+			name = Release;
+		};
+		EDB48DF92E0CD64800DDA70E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = goodman.LumacamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lumacam;
+			};
+			name = Debug;
+		};
+		EDB48DFA2E0CD64800DDA70E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = goodman.LumacamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lumacam;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDB48DC92E0CD64500DDA70E /* Build configuration list for PBXProject "Lumacam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB48DF02E0CD64800DDA70E /* Debug */,
+				EDB48DF12E0CD64800DDA70E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB48DF22E0CD64800DDA70E /* Build configuration list for PBXNativeTarget "Lumacam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB48DF32E0CD64800DDA70E /* Debug */,
+				EDB48DF42E0CD64800DDA70E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB48DF52E0CD64800DDA70E /* Build configuration list for PBXNativeTarget "LumacamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB48DF62E0CD64800DDA70E /* Debug */,
+				EDB48DF72E0CD64800DDA70E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB48DF82E0CD64800DDA70E /* Build configuration list for PBXNativeTarget "LumacamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB48DF92E0CD64800DDA70E /* Debug */,
+				EDB48DFA2E0CD64800DDA70E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDB48DC62E0CD64500DDA70E /* Project object */;
+}
