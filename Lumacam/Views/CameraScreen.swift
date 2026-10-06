@@ -32,8 +32,16 @@ struct CameraScreen: View {
             model.applyQuickLaunch(launch)
         }
         .onChange(of: scenePhase) { _, phase in
-            if phase == .active {
-                Task { await model.gallery.reload() }
+            switch phase {
+            case .active:
+                Task {
+                    await model.gallery.reload()
+                    await model.importLockScreenCaptures()
+                }
+            case .inactive, .background:
+                model.shareLockScreenSettings()
+            @unknown default:
+                break
             }
         }
         .fullScreenCover(isPresented: $showsGallery) {

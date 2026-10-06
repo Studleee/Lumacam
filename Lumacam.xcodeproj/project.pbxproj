@@ -11,6 +11,7 @@
 		EDB48DED2E0CD64800DDA70E /* LumacamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DEC2E0CD64800DDA70E /* LumacamUITests.swift */; };
 		EDB48DEF2E0CD64800DDA70E /* LumacamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB48DEE2E0CD64800DDA70E /* LumacamUITestsLaunchTests.swift */; };
 		EDB4900D2E0F000000DDA70E /* LumacamControls.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EDB490022E0F000000DDA70E /* LumacamControls.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EDB4910D2E0F100000DDA70E /* LumacamLockedCapture.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = EDB491022E0F100000DDA70E /* LumacamLockedCapture.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,13 @@
 			remoteGlobalIDString = EDB490012E0F000000DDA70E;
 			remoteInfo = LumacamControls;
 		};
+		EDB4910E2E0F100000DDA70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDB48DC62E0CD64500DDA70E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDB491012E0F100000DDA70E;
+			remoteInfo = LumacamLockedCapture;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +57,17 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDB4910C2E0F100000DDA70E /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				EDB4910D2E0F100000DDA70E /* LumacamLockedCapture.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +78,7 @@
 		EDB48DEC2E0CD64800DDA70E /* LumacamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumacamUITests.swift; sourceTree = "<group>"; };
 		EDB48DEE2E0CD64800DDA70E /* LumacamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumacamUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EDB490022E0F000000DDA70E /* LumacamControls.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LumacamControls.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB491022E0F100000DDA70E /* LumacamLockedCapture.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = LumacamLockedCapture.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -76,6 +96,13 @@
 			);
 			target = EDB490012E0F000000DDA70E /* LumacamControls */;
 		};
+		EDB4910A2E0F100000DDA70E /* Exceptions for "LumacamLockedCapture" folder in "LumacamLockedCapture" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EDB491012E0F100000DDA70E /* LumacamLockedCapture */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -91,6 +118,19 @@
 		EDB4900B2E0F000000DDA70E /* Shared */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		EDB491092E0F100000DDA70E /* LumacamLockedCapture */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EDB4910A2E0F100000DDA70E /* Exceptions for "LumacamLockedCapture" folder in "LumacamLockedCapture" target */,
+			);
+			path = LumacamLockedCapture;
+			sourceTree = "<group>";
+		};
+		EDB4910B2E0F100000DDA70E /* SharedCamera */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SharedCamera;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -124,6 +164,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDB491042E0F100000DDA70E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -131,8 +178,10 @@
 			isa = PBXGroup;
 			children = (
 				EDB48DD02E0CD64500DDA70E /* Lumacam */,
+				EDB4910B2E0F100000DDA70E /* SharedCamera */,
 				EDB4900B2E0F000000DDA70E /* Shared */,
 				EDB490092E0F000000DDA70E /* LumacamControls */,
+				EDB491092E0F100000DDA70E /* LumacamLockedCapture */,
 				EDB48DE12E0CD64800DDA70E /* LumacamTests */,
 				EDB48DEB2E0CD64800DDA70E /* LumacamUITests */,
 				EDB48DCF2E0CD64500DDA70E /* Products */,
@@ -146,6 +195,7 @@
 				EDB48DDE2E0CD64800DDA70E /* LumacamTests.xctest */,
 				EDB48DE82E0CD64800DDA70E /* LumacamUITests.xctest */,
 				EDB490022E0F000000DDA70E /* LumacamControls.appex */,
+				EDB491022E0F100000DDA70E /* LumacamLockedCapture.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,15 +228,18 @@
 				EDB48DCB2E0CD64500DDA70E /* Frameworks */,
 				EDB48DCC2E0CD64500DDA70E /* Resources */,
 				EDB4900C2E0F000000DDA70E /* Embed Foundation Extensions */,
+				EDB4910C2E0F100000DDA70E /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				EDB4900F2E0F000000DDA70E /* PBXTargetDependency */,
+				EDB4910F2E0F100000DDA70E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				EDB48DD02E0CD64500DDA70E /* Lumacam */,
 				EDB4900B2E0F000000DDA70E /* Shared */,
+				EDB4910B2E0F100000DDA70E /* SharedCamera */,
 			);
 			name = Lumacam;
 			productName = Lumacam;
@@ -250,6 +303,28 @@
 			productReference = EDB490022E0F000000DDA70E /* LumacamControls.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		EDB491012E0F100000DDA70E /* LumacamLockedCapture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB491062E0F100000DDA70E /* Build configuration list for PBXNativeTarget "LumacamLockedCapture" */;
+			buildPhases = (
+				EDB491032E0F100000DDA70E /* Sources */,
+				EDB491042E0F100000DDA70E /* Frameworks */,
+				EDB491052E0F100000DDA70E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EDB491092E0F100000DDA70E /* LumacamLockedCapture */,
+				EDB4900B2E0F000000DDA70E /* Shared */,
+				EDB4910B2E0F100000DDA70E /* SharedCamera */,
+			);
+			name = LumacamLockedCapture;
+			productName = LumacamLockedCapture;
+			productReference = EDB491022E0F100000DDA70E /* LumacamLockedCapture.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -274,6 +349,9 @@
 					EDB490012E0F000000DDA70E = {
 						CreatedOnToolsVersion = 26.6;
 					};
+					EDB491012E0F100000DDA70E = {
+						CreatedOnToolsVersion = 26.6;
+					};
 				};
 			};
 			buildConfigurationList = EDB48DC92E0CD64500DDA70E /* Build configuration list for PBXProject "Lumacam" */;
@@ -293,6 +371,7 @@
 				EDB48DDD2E0CD64800DDA70E /* LumacamTests */,
 				EDB48DE72E0CD64800DDA70E /* LumacamUITests */,
 				EDB490012E0F000000DDA70E /* LumacamControls */,
+				EDB491012E0F100000DDA70E /* LumacamLockedCapture */,
 			);
 		};
 /* End PBXProject section */
@@ -320,6 +399,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EDB490052E0F000000DDA70E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB491052E0F100000DDA70E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,6 +446,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDB491032E0F100000DDA70E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -377,6 +470,11 @@
 			isa = PBXTargetDependency;
 			target = EDB490012E0F000000DDA70E /* LumacamControls */;
 			targetProxy = EDB4900E2E0F000000DDA70E /* PBXContainerItemProxy */;
+		};
+		EDB4910F2E0F100000DDA70E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDB491012E0F100000DDA70E /* LumacamLockedCapture */;
+			targetProxy = EDB4910E2E0F100000DDA70E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -526,6 +624,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_framework",
+					LockedCameraCapture,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = goodman.Lumacam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -556,6 +659,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_framework",
+					LockedCameraCapture,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = goodman.Lumacam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -682,6 +790,56 @@
 			};
 			name = Release;
 		};
+		EDB491072E0F100000DDA70E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF6F4ML34J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LumacamLockedCapture/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lumacam;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = goodman.Lumacam.LockedCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDB491082E0F100000DDA70E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF6F4ML34J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LumacamLockedCapture/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lumacam;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = goodman.Lumacam.LockedCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -726,6 +884,15 @@
 			buildConfigurations = (
 				EDB490072E0F000000DDA70E /* Debug */,
 				EDB490082E0F000000DDA70E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB491062E0F100000DDA70E /* Build configuration list for PBXNativeTarget "LumacamLockedCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB491072E0F100000DDA70E /* Debug */,
+				EDB491082E0F100000DDA70E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

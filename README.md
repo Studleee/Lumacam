@@ -15,7 +15,8 @@ Built with SwiftUI and AVFoundation.
 - **Grid and level**: a rule-of-thirds grid and a horizon line that turns yellow when the phone is level.
 - **Photo and video**: photos save as HEIC when supported, and videos record with sound. Everything saves to your photo library with the correct orientation.
 - **In-app gallery**: browse your Lumacam captures, swipe through them full screen, play videos, and delete.
-- **Quick launch** (iOS 18): add Lumacam Photo, Video, or Selfie buttons to Control Center or the Lock Screen, or assign one to the Action Button. The same "Open Lumacam" action is available in the Shortcuts app and to Siri.
+- **Lock Screen camera** (iOS 18): the Lumacam control opens a camera straight from the Lock Screen, Control Center, or the Action Button without unlocking the phone. It has the flash, zoom dial, tap to focus, aspect ratios, and camera flip. Photos taken while locked are moved into your library and the gallery the next time you open the app.
+- **Quick launch** (iOS 18): Lumacam Video and Lumacam Selfie controls open the app straight into those modes after you unlock. The "Open Lumacam" action is also available in the Shortcuts app and to Siri.
 
 ## Requirements
 
@@ -40,11 +41,13 @@ If Xcode says the device needs Developer Mode, turn it on in **Settings → Priv
 ## Project structure
 
 ```
-LumacamControls/    Control Center, Lock Screen, and Action Button controls (widget extension, iOS 18)
-Shared/             "Open Lumacam" App Intent, used by the app and the controls
+LumacamControls/        Control Center, Lock Screen, and Action Button controls (widget extension, iOS 18)
+LumacamLockedCapture/   Camera that runs from the Lock Screen (Locked Camera Capture extension, iOS 18)
+SharedCamera/           Capture session, preview, cropping, and camera controls shared by the app and Lock Screen camera
+Shared/                 App Intents shared by the app and both extensions
 Lumacam/
 ├── App/            App entry point
-├── Camera/         Capture session, preview, photo library, motion, and cropping
+├── Camera/         Photo library, motion, and Lock Screen capture import
 ├── ViewModels/     Camera and gallery state (@Observable)
 └── Views/
     ├── Controls/   Top bar, shutter, zoom dial, mode picker, adjustments panel

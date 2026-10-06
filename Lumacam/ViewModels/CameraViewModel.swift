@@ -70,6 +70,27 @@ final class CameraViewModel {
         authorization = .authorized
         service.start(mode: mode, torchLevel: isTorchOn ? torchLevel : 0)
         await gallery.reload()
+        await importLockScreenCaptures()
+        shareLockScreenSettings()
+    }
+
+    /// Brings in photos taken with the Lock Screen camera since the app was last opened.
+    func importLockScreenCaptures() async {
+        guard #available(iOS 18, *) else { return }
+        do {
+            _ = try await LockedCaptureImporter.importCaptures(into: gallery)
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+    }
+
+    /// Gives the Lock Screen camera the current flash and aspect ratio settings.
+    func shareLockScreenSettings() {
+        guard #available(iOS 18, *) else { return }
+        let aspect = photoAspect, level = torchLevel, isOn = isTorchOn
+        Task {
+            await LockedCaptureImporter.shareSettings(photoAspect: aspect, torchLevel: level, isTorchOn: isOn)
+        }
     }
 
     private static func requestCameraAccess() async -> Bool {

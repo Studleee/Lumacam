@@ -12,15 +12,16 @@ struct LumacamControlsBundle: WidgetBundle {
     }
 }
 
+/// Opens the Lock Screen camera when the phone is locked, and the app when it's unlocked.
 struct LumacamPhotoControl: ControlWidget {
     var body: some ControlWidgetConfiguration {
         StaticControlConfiguration(kind: "goodman.Lumacam.controls.photo") {
-            ControlWidgetButton(action: OpenLumacamIntent(mode: .photo)) {
+            ControlWidgetButton(action: LumacamCaptureIntent()) {
                 Label("Lumacam", systemImage: "camera.fill")
             }
         }
-        .displayName("Lumacam Photo")
-        .description("Open Lumacam ready to take a photo.")
+        .displayName("Lumacam")
+        .description("Open the Lumacam camera, even from the Lock Screen.")
     }
 }
 
