@@ -94,6 +94,16 @@ final class CameraViewModel {
         }
     }
 
+    /// Puts the camera in the state requested by a Control Center, Lock Screen, or Shortcuts launch.
+    func applyQuickLaunch(_ launch: QuickLaunchMode) {
+        guard authorization == .authorized, !isBusy else { return }
+        setMode(launch == .video ? .video : .photo)
+        let wantsFront = launch == .selfie
+        if (capabilities.position == .front) != wantsFront {
+            switchCamera()
+        }
+    }
+
     func switchCamera() {
         guard !isBusy else { return }
         focusPoint = nil

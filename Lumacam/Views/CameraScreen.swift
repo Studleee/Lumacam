@@ -3,6 +3,7 @@ import SwiftUI
 struct CameraScreen: View {
     @State private var model = CameraViewModel()
     @State private var showsGallery = false
+    private let quickLaunch = QuickLaunchCenter.shared
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -20,7 +21,16 @@ struct CameraScreen: View {
         }
         .preferredColorScheme(.dark)
         .statusBarHidden()
-        .task { await model.start() }
+        .task {
+            await model.start()
+            if let launch = quickLaunch.take() {
+                model.applyQuickLaunch(launch)
+            }
+        }
+        .onChange(of: quickLaunch.pending) { _, launch in
+            guard launch != nil, model.authorization == .authorized, let launch = quickLaunch.take() else { return }
+            model.applyQuickLaunch(launch)
+        }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {
                 Task { await model.gallery.reload() }

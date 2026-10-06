@@ -15,6 +15,7 @@ Built with SwiftUI and AVFoundation.
 - **Grid and level**: a rule-of-thirds grid and a horizon line that turns yellow when the phone is level.
 - **Photo and video**: photos save as HEIC when supported, and videos record with sound. Everything saves to your photo library with the correct orientation.
 - **In-app gallery**: browse your Lumacam captures, swipe through them full screen, play videos, and delete.
+- **Quick launch** (iOS 18): add Lumacam Photo, Video, or Selfie buttons to Control Center or the Lock Screen, or assign one to the Action Button. The same "Open Lumacam" action is available in the Shortcuts app and to Siri.
 
 ## Requirements
 
@@ -39,6 +40,8 @@ If Xcode says the device needs Developer Mode, turn it on in **Settings → Priv
 ## Project structure
 
 ```
+LumacamControls/    Control Center, Lock Screen, and Action Button controls (widget extension, iOS 18)
+Shared/             "Open Lumacam" App Intent, used by the app and the controls
 Lumacam/
 ├── App/            App entry point
 ├── Camera/         Capture session, preview, photo library, motion, and cropping
